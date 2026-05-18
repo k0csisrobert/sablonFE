@@ -19,14 +19,14 @@ export default function OsszesSzallas() {
 
                 {data &&
                     data.map((item) => {
-                        return <div className="card" style={{ width: '18rem' }}>
+                        return <div className="card" key={item.id} style={{ width: '18rem' }}>
                             <div className="card-body">
                                 <h5 className="card-title">{item.name}</h5>
                                 <p className="card-text">{item.hostname}</p>
                                 <p className="card-text">{item.location}</p>
                                 <p className="card-text">{item.price}</p>
                                 <p className="card-text">{item.minimum_nights}</p>
-                                <Link to={"/szallas/" + item.id}><i class="bi bi-eye"></i></Link>
+                                <Link to={"/szallas/" + item.id}><i className="bi bi-eye"></i></Link>
                             </div>
                         </div>
                     })}
